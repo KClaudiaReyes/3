@@ -10,12 +10,24 @@ namespace _3
     {
         static void Main(string[] args)
         {
-            Dictionary < string, double> estudiantes = new Dictionary < string, double> ();
+            Dictionary < string, double> estudiantesNotas = new Dictionary < string, double> ();
 
-            estudiantes.Add("James", 62);
-            estudiantes.Add("Brisa ", 85);
-            estudiantes.Add("Marlon" , 73);
-            estudiantes.Add("Marta  ", 58);
+            estudiantesNotas.Add("James", 62);
+            estudiantesNotas.Add("Brisa ", 85);
+            estudiantesNotas.Add("Marlon" , 73);
+            estudiantesNotas.Add("Marta  ", 58);
+
+            string BuscarEstudy = " Brisa";
+
+            if (estudiantesNotas.ContainsKey(BuscarEstudy))
+            {
+                double Nota = estudiantesNotas[BuscarEstudy];
+                Console.WriteLine("La Nota de: " + BuscarEstudy + " es de " + Nota);
+            }
+            else
+            {
+                Console.WriteLine("El estudiante no existe ");
+            }
 
 
         }
